@@ -19,18 +19,36 @@ body {
 }
 
 .container-main {
-
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 70px auto;
+    max-width: 1500px;
+    padding: 40px;
+    width: 90%;
+    width: 90%;
+    gap: 12px;
 }
 
 .banner {
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
 
 }
 
 .banner ul {
-    
+    list-style: none;
 }
 
 .banner ul li {
+    font-weight: bold;
+    padding-bottom: 8px;
     
 }
 
@@ -50,7 +68,9 @@ body {
 }
 
 .container-cards {
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
 }
 
 .card {
@@ -62,10 +82,16 @@ body {
 }
 
 .card .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    
 
 }
 
 .card .texts h5 {
+    text-align: right;
 
 }
 
@@ -79,7 +105,14 @@ hr {
 }
 
 .container-info {
-
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 70px auto;
+    max-width: 1500px;
+    padding: 40px;
+    width: 90%;
+    width: 90%;
+    gap: 12px;
 }
 
 .container-info .presentation {
@@ -98,12 +131,14 @@ hr {
 .container-info .form input {
     border-radius: 8px;
     margin-bottom: 14px;
+    width: 100%;
     padding: 6px;
 }
 
 .container-info .form textarea {
     border-radius: 8px;
     margin-bottom: 14px;
+    width: 100%;
     padding: 6px;
     resize: none;
 }
@@ -125,23 +160,56 @@ hr {
 }
 
 .container-images {
-
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 1500px;
+    padding: 40px auto;
+    width: 90%;
 }
 
 .container-images img {
     border: 2px solid var(--color-black);
     width: 100%;
 }
-
+.container-images img:hover {
+    transform: scale(1.5);
+}
 /* Media Queries */
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-
+    .container-info{
+        font-size: 14px;
+    }
+    .container-images{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+    
+    .container-main{
+        grid-template-columns: 1fr;
+    }
+    
+    .container-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .container-info{
+        grid-template-columns: 1fr;
+        input[type="email"] {
+            width: 100%;
+        }
+        textarea[name="Question"] {
+            width: 100%;
+        }
+    }
+    .container-images{
+        grid-template-columns: 1fr;
+    }
 
 }
 
