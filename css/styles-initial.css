@@ -168,13 +168,18 @@ hr {
     padding: 40px auto;
     width: 90%;
 }
+.container-images img {
+    border: 2px solid var(--color-black);
+    transition: transform 0.8s;
+    width: 100%;
+}
 
 .container-images img {
     border: 2px solid var(--color-black);
     width: 100%;
 }
 .container-images img:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 /* Media Queries */
 
